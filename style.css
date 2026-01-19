@@ -957,3 +957,13 @@ footer {
         font-size: 1.4rem;
     }
 }
+
+/* Venue name link styling */
+.live-venue .venue-name {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.live-venue .venue-name:hover {
+    color: var(--primary-red);
+}
