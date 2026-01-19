@@ -315,27 +315,27 @@ nav {
 
 /* Individual adjustments based on image content */
 .member-slice:nth-child(1) {
-    background-position: center 20%;
+    background-position: center 10%;
 }
 
 /* Ba. 大ちゃん */
 .member-slice:nth-child(2) {
-    background-position: center 20%;
+    background-position: center 10%;
 }
 
 /* Gt. タッカン */
 .member-slice:nth-child(3) {
-    background-position: center 60%;
+    background-position: center 35%;
 }
 
 /* Vo. MI-CO */
 .member-slice:nth-child(4) {
-    background-position: center 20%;
+    background-position: center 10%;
 }
 
 /* Gt. TAKUMI */
 .member-slice:nth-child(5) {
-    background-position: center 25%;
+    background-position: center 15%;
 }
 
 /* Ds. 福村 */
