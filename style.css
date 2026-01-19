@@ -305,7 +305,7 @@ nav {
 .member-slice {
     flex: 1;
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
     position: relative;
     transition: flex 0.5s cubic-bezier(0.2, 1, 0.2, 1), filter 0.3s, transform 0.3s;
     filter: grayscale(100%) brightness(0.6);
@@ -318,10 +318,11 @@ nav {
 }
 
 .member-slice:hover {
-    flex: 2.5;
-    /* Expand more on hover */
+    flex: 3;
+    /* Expand significantly on hover to show more image */
     filter: grayscale(0%) brightness(1);
-    transform: scale(1.02);
+    transform: none;
+    /* Removed scale to prevent zooming in */
     z-index: 10;
 }
 
