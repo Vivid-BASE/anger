@@ -373,13 +373,6 @@ nav {
     transform: rotate(0deg);
 }
 
-.member-overlay span {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    color: var(--primary-red);
-    letter-spacing: 2px;
-}
-
 /* Mobile Member Fix */
 @media (max-width: 768px) {
     .member-row {
@@ -390,7 +383,7 @@ nav {
     .member-slice {
         height: 250px;
         width: 100%;
-        background-position: center 20%;
+        background-position: center top;
     }
 
     .member-slice:hover {
@@ -398,6 +391,7 @@ nav {
         /* Disable flex expand on mobile */
         height: 250px;
     }
+
 
     .member-overlay {
         opacity: 1;
