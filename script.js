@@ -68,6 +68,98 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Member data in Japanese
+    const memberData = {
+        'bass': {
+            name: 'Ba. 大ちゃん',
+            fullName: '大ちゃん',
+            role: 'Bass',
+            image: 'assets/images/member_vocal.png',
+            bio: 'バンドを支える確かなベースライン。',
+            bands: 'X',
+            sns: ''
+        },
+        'guitar1': {
+            name: 'Gt. タッカン',
+            fullName: 'タッカン',
+            role: 'Guitar',
+            image: 'assets/images/member_drums.png',
+            bio: 'パワフルなリフで観客を魅了するギタリスト。',
+            bands: 'X',
+            sns: ''
+        },
+        'vocal': {
+            name: 'Vo. MI-CO',
+            fullName: 'MI-CO',
+            role: 'Vocal',
+            image: 'assets/images/member_bass.png',
+            bio: '圧倒的な歌唱力でバンドの顔として活躍。',
+            bands: 'from Candy Rain',
+            sns: ''
+        },
+        'guitar2': {
+            name: 'Gt. TAKUMI',
+            fullName: 'TAKUMI',
+            role: 'Guitar',
+            image: 'assets/images/member_guitar2.png',
+            bio: 'テクニカルなプレイで楽曲に彩りを添える。',
+            bands: 'from Candy Rain',
+            sns: ''
+        },
+        'drums': {
+            name: 'Ds. 福村 高志',
+            fullName: '福村 高志',
+            role: 'Drums',
+            image: 'assets/images/member_guitar1.png',
+            bio: 'バンドのリズムを刻む熟練ドラマー。',
+            bands: 'RAJAS, X-Ray',
+            sns: ''
+        }
+    };
+
+    // Click event for member slices
+    document.querySelectorAll('.member-slice').forEach(slice => {
+        slice.addEventListener('click', function () {
+            const memberId = this.getAttribute('data-member-id');
+            const member = memberData[memberId];
+
+            if (member) {
+                modalImage.src = member.image;
+                modalImage.alt = member.name;
+
+                modalDetails.innerHTML = `
+                    <h2>${member.name}</h2>
+                    <div class="detail-section">
+                        <span class="detail-label">パート</span>
+                        <div class="detail-value">${member.role}</div>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <span class="detail-label">プロフィール</span>
+                        <div class="detail-value" style="font-size: 1.1rem; line-height: 1.8;">${member.bio}</div>
+                    </div>
+                    
+                    ${member.bands && member.bands !== 'X' ? `
+                    <div class="detail-section">
+                        <span class="detail-label">主な経歴 / 所属バンド</span>
+                        <div class="detail-value">${member.bands}</div>
+                    </div>
+                    ` : ''}
+                    
+                    ${member.sns ? `
+                    <div class="detail-section">
+                        <span class="detail-label">SNS</span>
+                        <div class="detail-value"><a href="${member.sns}" target="_blank" style="color: var(--primary-red);">Link</a></div>
+                    </div>
+                    ` : ''}
+                `;
+
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
     // Click event for flyer images
     document.querySelectorAll('.clickable-flyer').forEach(img => {
         img.addEventListener('click', function () {

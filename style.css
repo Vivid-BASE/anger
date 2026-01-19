@@ -305,12 +305,12 @@ nav {
 .member-slice {
     flex: 1;
     background-size: cover;
-    background-position: center top;
+    background-position: center center;
     position: relative;
-    transition: flex 0.5s cubic-bezier(0.2, 1, 0.2, 1), filter 0.3s;
+    transition: flex 0.5s cubic-bezier(0.2, 1, 0.2, 1), filter 0.3s, transform 0.3s;
     filter: grayscale(100%) brightness(0.6);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    cursor: crosshair;
+    cursor: pointer;
 }
 
 .member-slice:last-child {
@@ -318,9 +318,11 @@ nav {
 }
 
 .member-slice:hover {
-    flex: 2;
-    /* Expand on hover */
+    flex: 2.5;
+    /* Expand more on hover */
     filter: grayscale(0%) brightness(1);
+    transform: scale(1.02);
+    z-index: 10;
 }
 
 .member-slice:hover .member-overlay {
@@ -907,6 +909,7 @@ footer {
         font-size: 40px;
     }
 }
+
 /* Live Header - Date and Venue Upfront */
 .live-header {
     margin-bottom: 30px;
@@ -952,7 +955,7 @@ footer {
     .live-date-large .date-text {
         font-size: 1.8rem;
     }
-    
+
     .live-venue .venue-name {
         font-size: 1.4rem;
     }
