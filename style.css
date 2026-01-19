@@ -305,13 +305,40 @@ nav {
 .member-slice {
     flex: 1;
     background-size: cover;
-    background-position: center top;
+    background-position: center 20%;
     position: relative;
     transition: flex 0.5s cubic-bezier(0.2, 1, 0.2, 1), filter 0.3s, transform 0.3s;
     filter: grayscale(100%) brightness(0.6);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
 }
+
+/* Individual adjustments based on image content */
+.member-slice:nth-child(1) {
+    background-position: center 25%;
+}
+
+/* Ba. 大ちゃん */
+.member-slice:nth-child(2) {
+    background-position: center 25%;
+}
+
+/* Gt. タッカン */
+.member-slice:nth-child(3) {
+    background-position: center 55%;
+}
+
+/* Vo. MI-CO (Needs adjustment) */
+.member-slice:nth-child(4) {
+    background-position: center 25%;
+}
+
+/* Gt. TAKUMI */
+.member-slice:nth-child(5) {
+    background-position: center 30%;
+}
+
+/* Ds. 福村 */
 
 .member-slice:last-child {
     border-right: none;
@@ -322,7 +349,6 @@ nav {
     /* Expand significantly on hover to show more image */
     filter: grayscale(0%) brightness(1);
     transform: none;
-    /* Removed scale to prevent zooming in */
     z-index: 10;
 }
 
