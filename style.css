@@ -315,22 +315,22 @@ nav {
 
 /* Individual adjustments based on image content */
 .member-slice:nth-child(1) {
-    background-position: center 5%;
+    background-position: center top;
 }
 
 /* Ba. 大ちゃん */
 .member-slice:nth-child(2) {
-    background-position: center 5%;
+    background-position: center top;
 }
 
 /* Gt. タッカン */
 .member-slice:nth-child(3) {
-    background-position: center 28%;
+    background-position: center 15%;
 }
 
-/* Vo. MI-CO */
+/* Vo. MI-CO (Center of face) */
 .member-slice:nth-child(4) {
-    background-position: center 5%;
+    background-position: center top;
 }
 
 /* Gt. TAKUMI */
@@ -338,7 +338,7 @@ nav {
     background-position: center 5%;
 }
 
-/* Ds. 福村 */
+/* Ds. 福村 (Hat brim needs slight space) */
 
 .member-slice:last-child {
     border-right: none;
