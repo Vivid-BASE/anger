@@ -17,6 +17,64 @@
     /* Clean Body */
 }
 
+/* Opening Animation - Logo to Photo Transition */
+#opening-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: overlayFadeOut 0.6s forwards 2.4s ease-out;
+    pointer-events: none;
+}
+
+.opening-logo {
+    max-width: 600px;
+    width: 60%;
+    height: auto;
+    opacity: 0;
+    animation: logoFadeInOut 2.4s forwards ease-in-out;
+    filter: drop-shadow(0 0 30px rgba(230, 0, 0, 0.5));
+}
+
+@keyframes logoFadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes overlayFadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 
 /* Texture Overlay */
 .noise-overlay {
@@ -133,7 +191,7 @@ nav {
     width: 100%;
 }
 
-/* Hero - Float Up Animation */
+/* Hero - Entrance After Logo */
 .hero {
     height: 100vh;
     display: flex;
@@ -145,21 +203,18 @@ nav {
     background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.3) 0%, rgba(5, 5, 5, 0.6) 80%, rgba(5, 5, 5, 1) 100%), url('assets/images/band_photo.jpg');
     background-size: cover;
     background-position: top center;
-    /* Float up animation */
+    /* Entrance animation after logo */
     opacity: 0;
-    transform: translateY(40px) scale(0.98);
-    animation: heroFloatUp 1.4s forwards cubic-bezier(0.16, 1, 0.3, 1);
+    animation: heroFadeIn 0.8s forwards 2.4s ease-out;
 }
 
-@keyframes heroFloatUp {
+@keyframes heroFadeIn {
     0% {
         opacity: 0;
-        transform: translateY(40px) scale(0.98);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
     }
 }
 
@@ -174,7 +229,7 @@ nav {
     /* Delayed entrance animation */
     opacity: 0;
     transform: translateX(30px);
-    animation: contentSlideIn 0.8s forwards 0.6s ease-out;
+    animation: contentSlideIn 0.8s forwards 2.8s ease-out;
 }
 
 @keyframes contentSlideIn {
