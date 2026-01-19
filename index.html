@@ -53,7 +53,8 @@
             <h2 class="section-title">LIVE SCHEDULE</h2>
             <div class="live-card">
                 <div class="live-flyer">
-                    <img src="assets/images/live_20260301.jpg" alt="LOUD&PROUD vol.455 Flyer" class="flyer-img">
+                    <img src="assets/images/live_20260301.jpg" alt="LOUD&PROUD vol.455 Flyer"
+                        class="flyer-img clickable-flyer" data-event-id="live-20260301">
                 </div>
                 <div class="live-details-container">
                     <div class="live-date">
@@ -173,6 +174,15 @@
             </div>
         </div>
     </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content-wrapper">
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-details" id="modalDetails"></div>
+        </div>
+    </div>
 
     <footer id="contact">
         <p>&copy; 2026 ANGER MANAGEMENT. All Rights Reserved.</p>
