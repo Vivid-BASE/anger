@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'release-start-afresh': {
             title: '1st Single "Start Afresh"',
-            date: '配信中',
+            date: '2025年9月11日',
             type: 'release',
             tracks: [
                 '1. Start Afresh',
