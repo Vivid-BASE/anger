@@ -47,6 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
             door: '¥3,000',
             lineup: 'ETERNAL GROUND / TRASH GANG feat. Shigeru / <span class="lineup-highlight">ANGER MANAGEMENT</span> / THUNDERWARRIOR / Dancing Brave',
             tickets: 'チケット料金: Web予約 → バンド予約 → 当日券の順'
+        },
+        'release-start-afresh': {
+            title: '1st Single "Start Afresh"',
+            date: '配信中',
+            type: 'release',
+            tracks: [
+                '1. Start Afresh',
+                '2. Broken Wings',
+                '3. Rage Against The Darkness'
+            ],
+            credits: [
+                'Vo. MI-CO (from Candy Rain)',
+                'Gt. タッカン',
+                'Gt. TAKUMI',
+                'Ba. 大ちゃん',
+                'Ds. 福村 高志'
+            ],
+            streaming: 'Apple Music / Spotify / Amazon Music / YouTube Music / LINE MUSIC / AWA / レコチョク / dヒッツ'
         }
     };
 
@@ -60,35 +78,64 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalImage.src = this.src;
                 modalImage.alt = this.alt;
 
-                // Build details HTML in Japanese
-                modalDetails.innerHTML = `
+                // Build details HTML based on type
+                let detailsHTML = `
                     <h2>${event.title}</h2>
                     <div class="event-date">${event.date}</div>
-                    
-                    <div class="detail-section">
-                        <span class="detail-label">会場</span>
-                        <div class="detail-value">${event.venue}</div>
-                    </div>
-                    
-                    <div class="detail-section">
-                        <span class="detail-label">時間</span>
-                        <div class="detail-value">開場 ${event.open} / 開演 ${event.start}</div>
-                    </div>
-                    
-                    <div class="detail-section">
-                        <span class="detail-label">料金</span>
-                        <div class="detail-value">前売 ${event.adv} / 当日 ${event.door}</div>
-                    </div>
-                    
-                    <div class="detail-section">
-                        <span class="detail-label">出演</span>
-                        <div class="detail-value">${event.lineup}</div>
-                    </div>
-                    
-                    <div class="detail-section">
-                        <div class="detail-value" style="font-size: 0.9rem; color: var(--text-muted);">${event.tickets}</div>
-                    </div>
                 `;
+
+                if (event.type === 'release') {
+                    // Release details
+                    detailsHTML += `
+                        <div class="detail-section">
+                            <span class="detail-label">収録曲</span>
+                            <div class="detail-value">
+                                ${event.tracks.map(track => `<div>${track}</div>`).join('')}
+                            </div>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <span class="detail-label">メンバー</span>
+                            <div class="detail-value">
+                                ${event.credits.map(credit => `<div>${credit}</div>`).join('')}
+                            </div>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <span class="detail-label">配信サービス</span>
+                            <div class="detail-value" style="font-size: 0.95rem; line-height: 1.6;">${event.streaming}</div>
+                        </div>
+                    `;
+                } else {
+                    // Live event details
+                    detailsHTML += `
+                        <div class="detail-section">
+                            <span class="detail-label">会場</span>
+                            <div class="detail-value">${event.venue}</div>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <span class="detail-label">時間</span>
+                            <div class="detail-value">開場 ${event.open} / 開演 ${event.start}</div>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <span class="detail-label">料金</span>
+                            <div class="detail-value">前売 ${event.adv} / 当日 ${event.door}</div>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <span class="detail-label">出演</span>
+                            <div class="detail-value">${event.lineup}</div>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <div class="detail-value" style="font-size: 0.9rem; color: var(--text-muted);">${event.tickets}</div>
+                        </div>
+                    `;
+                }
+
+                modalDetails.innerHTML = detailsHTML;
 
                 modal.classList.add('show');
                 document.body.style.overflow = 'hidden';
