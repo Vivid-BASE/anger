@@ -907,3 +907,53 @@ footer {
         font-size: 40px;
     }
 }
+/* Live Header - Date and Venue Upfront */
+.live-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+.live-date-large {
+    margin-bottom: 10px;
+}
+
+.live-date-large .date-text {
+    font-family: var(--font-main);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    letter-spacing: 3px;
+}
+
+.live-venue {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.live-venue .venue-label {
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+.live-venue .venue-name {
+    font-family: var(--font-main);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .live-date-large .date-text {
+        font-size: 1.8rem;
+    }
+    
+    .live-venue .venue-name {
+        font-size: 1.4rem;
+    }
+}
