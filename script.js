@@ -70,31 +70,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Member data in Japanese
     const memberData = {
-        'bass': {
-            name: 'Ba. 大ちゃん',
-            fullName: '大ちゃん',
-            role: 'Bass',
+        'vocal': {
+            name: 'Vo. MI-CO',
+            fullName: 'MI-CO',
+            role: 'Vocal',
             image: 'assets/images/member_vocal.png',
-            bio: 'バンドを支える確かなベースライン。',
-            bands: 'X',
+            bio: '圧倒的な歌唱力でバンドの顔として活躍。',
+            bands: 'from Candy Rain',
             sns: ''
         },
         'guitar1': {
             name: 'Gt. タッカン',
             fullName: 'タッカン',
             role: 'Guitar',
-            image: 'assets/images/member_drums.png',
+            image: 'assets/images/member_guitar1.png',
             bio: 'パワフルなリフで観客を魅了するギタリスト。',
             bands: 'X',
-            sns: ''
-        },
-        'vocal': {
-            name: 'Vo. MI-CO',
-            fullName: 'MI-CO',
-            role: 'Vocal',
-            image: 'assets/images/member_bass.png',
-            bio: '圧倒的な歌唱力でバンドの顔として活躍。',
-            bands: 'from Candy Rain',
             sns: ''
         },
         'guitar2': {
@@ -106,11 +97,20 @@ document.addEventListener('DOMContentLoaded', () => {
             bands: 'from Candy Rain',
             sns: ''
         },
+        'bass': {
+            name: 'Ba. 大ちゃん',
+            fullName: '大ちゃん',
+            role: 'Bass',
+            image: 'assets/images/member_bass.png',
+            bio: 'バンドを支える確かなベースライン。',
+            bands: 'X',
+            sns: ''
+        },
         'drums': {
             name: 'Ds. 福村 高志',
             fullName: '福村 高志',
             role: 'Drums',
-            image: 'assets/images/member_guitar1.png',
+            image: 'assets/images/member_drums.png',
             bio: 'バンドのリズムを刻む熟練ドラマー。',
             bands: 'RAJAS, X-Ray',
             sns: ''
@@ -255,5 +255,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Escape' && modal.classList.contains('show')) {
             closeModal();
         }
+    });
+
+    // Back to Top Button Logic
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });

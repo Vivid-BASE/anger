@@ -218,6 +218,23 @@ nav {
     }
 }
 
+/* Mobile Hero Fix */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        /* Smaller on mobile to show full photo */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #000;
+        background-position: center top;
+    }
+
+    .hero-content {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
 .hero-content {
     /* Position bottom-right minimal style */
     position: absolute;
@@ -381,21 +398,30 @@ nav {
     }
 
     .member-slice {
-        height: 250px;
+        height: 350px;
+        /* Increased height for better visibility */
         width: 100%;
         background-position: center top;
+        filter: grayscale(0%) brightness(0.8);
+        /* Less dark on mobile */
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .member-slice:hover {
         flex: none;
-        /* Disable flex expand on mobile */
-        height: 250px;
+        height: 350px;
+        filter: brightness(1.1);
     }
-
 
     .member-overlay {
         opacity: 1;
-        bottom: 20px;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .member-overlay h3 {
+        font-size: 1.8rem;
     }
 }
 
@@ -1019,4 +1045,43 @@ footer {
     .contact-text {
         font-size: 0.9rem;
     }
+}
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: rgba(230, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(230, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#back-to-top:hover {
+    background: var(--primary-red);
+    box-shadow: 0 0 20px rgba(230, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+#back-to-top svg {
+    width: 24px;
+    height: 24px;
 }
