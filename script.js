@@ -70,13 +70,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Member data in Japanese
     const memberData = {
-        'vocal': {
-            name: 'Vo. MI-CO',
-            fullName: 'MI-CO',
-            role: 'Vocal',
-            image: 'assets/images/member_bass.png',
-            bio: '圧倒的な歌唱力でバンドの顔として活躍。',
-            bands: 'from Candy Rain',
+        'bass': {
+            name: 'Ba. 大ちゃん',
+            fullName: '大ちゃん',
+            role: 'Bass',
+            image: 'assets/images/member_vocal.png',
+            bio: 'バンドを支える確かなベースライン。',
+            bands: 'X',
             sns: ''
         },
         'guitar1': {
@@ -88,6 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
             bands: 'X',
             sns: ''
         },
+        'vocal': {
+            name: 'Vo. MI-CO',
+            fullName: 'MI-CO',
+            role: 'Vocal',
+            image: 'assets/images/member_bass.png',
+            bio: '圧倒的な歌唱力でバンドの顔として活躍。',
+            bands: 'from Candy Rain',
+            sns: ''
+        },
         'guitar2': {
             name: 'Gt. TAKUMI',
             fullName: 'TAKUMI',
@@ -95,15 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
             image: 'assets/images/member_guitar2.png',
             bio: 'テクニカルなプレイで楽曲に彩りを添える。',
             bands: 'from Candy Rain',
-            sns: ''
-        },
-        'bass': {
-            name: 'Ba. 大ちゃん',
-            fullName: '大ちゃん',
-            role: 'Bass',
-            image: 'assets/images/member_vocal.png',
-            bio: 'バンドを支える確かなベースライン。',
-            bands: 'X',
             sns: ''
         },
         'drums': {
