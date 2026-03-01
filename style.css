@@ -302,8 +302,8 @@ nav {
         background-repeat: no-repeat;
         background-color: #000;
         background-position: center top;
-        margin-top: 120px;
-        /* More space for header */
+        margin-top: 180px;
+        /* Significantly increased to ensure no overlap */
         padding-top: 0;
     }
 
@@ -494,11 +494,12 @@ nav {
         display: block;
         flex: none;
         /* Crucial: prevent collapse in flex container */
-        height: 50vh;
-        /* Fixed height for reliability */
-        min-height: 350px;
+        height: 70vh;
+        /* Taller for better portrait view */
+        min-height: 450px;
         width: 100%;
-        background-position: center 15%;
+        background-position: center top;
+        /* Keep faces visible */
         background-size: cover;
         filter: grayscale(0%) brightness(0.9);
         border-right: none;
