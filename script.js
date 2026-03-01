@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Vo. MI-CO',
             fullName: 'MI-CO',
             role: 'Vocal',
-            image: 'assets/images/member_vocal.png',
+            image: 'assets/images/member_bass.png',
             bio: '圧倒的な歌唱力でバンドの顔として活躍。',
             bands: 'from Candy Rain',
             sns: ''
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Gt. タッカン',
             fullName: 'タッカン',
             role: 'Guitar',
-            image: 'assets/images/member_guitar1.png',
+            image: 'assets/images/member_drums.png',
             bio: 'パワフルなリフで観客を魅了するギタリスト。',
             bands: 'X',
             sns: ''
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Ba. 大ちゃん',
             fullName: '大ちゃん',
             role: 'Bass',
-            image: 'assets/images/member_bass.png',
+            image: 'assets/images/member_vocal.png',
             bio: 'バンドを支える確かなベースライン。',
             bands: 'X',
             sns: ''
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Ds. 福村 高志',
             fullName: '福村 高志',
             role: 'Drums',
-            image: 'assets/images/member_drums.png',
+            image: 'assets/images/member_guitar1.png',
             bio: 'バンドのリズムを刻む熟練ドラマー。',
             bands: 'RAJAS, X-Ray',
             sns: ''
